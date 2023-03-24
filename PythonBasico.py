@@ -74,4 +74,12 @@ elif 5>3:    # comienza segundo condicional
     print ("esto no se imprimirá")
 else:
     print ("aquí nunca llega")
+      
+#=============
+#  Funciones
+#=============
+def say_hello(name):
+   print("Hello", name)
+   print("Welcome to Python Tutorials")
 
+say_hello("Paola")
