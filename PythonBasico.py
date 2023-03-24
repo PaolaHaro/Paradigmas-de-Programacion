@@ -159,3 +159,6 @@ print(n)
 #  Las letras en un string ocupan lugares como en un arreglo
 #  (también de atrás para adelante comenzando en -1 el último)
 #==============================================================
+palabra ="hola"
+print(palabra[0])
+print(palabra[-4])
