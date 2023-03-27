@@ -20,6 +20,7 @@ print (type(t))   # real (flotante)
 t=True
 print (type(t))   # booleano (bool)
 
+
 #======================
 #  Mensaje a pantalla
 #======================
@@ -37,11 +38,13 @@ if 100 > 99 and \
    200 <= 300 and \
    True != False:
        print('Hello World!')
+      
 
 #=========================================
 #  Comandos diferentes en la misma línea
 #=========================================
 print("Hola "); print("tu!!")   # Se considera mala práctica
+
 
 #==================================================
 #  Usando paréntesis redondos, cuadrados o llaves
@@ -75,6 +78,7 @@ elif 5>3:    # comienza segundo condicional
 else:
     print ("aquí nunca llega")
       
+      
 #=============
 #  Funciones
 #=============
@@ -85,17 +89,22 @@ def say_hello(name):
 say_hello("Paola")
 
 
+
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #=======================================================
 #  Input permite obtener datos del usuario en prompter
 #=======================================================
 nombre = input("Dame tu nombre: ")
 print("Hola como estás"; nombre)
 
+
 #===========================================
 #  Los enteros son de precisión ilimitada
 #===========================================
 y = 500000000000000000000000000000
 print(y)
+
 
 #===============================================================
 #  Se pueden delimitar números con guión bajo pero no con coma
@@ -159,6 +168,7 @@ print(n)
 #  Las letras en un string ocupan lugares como en un arreglo
 #  (también de atrás para adelante comenzando en -1 el último)
 #==============================================================
-palabra ="hola"
+palabra = "hola"
 print(palabra[0])
 print(palabra[-4])
+
