@@ -317,5 +317,44 @@ for i in nums:
 #========================================
 #  Incluir nuevos elementos de la lista
 #========================================
+nums.append(61)
+nums.append(62)
+nums.append(61)
+print(nums)
 
+#===============================
+#  Quitar elemento de la lista
+#===============================
+nums.remove(61)
+print(nums)
+
+#================================
+#  Quitar elemento con índice i
+#================================
+i = 61
+del nums[i]
+print(nums)
+
+#===================
+#  Borrar la lista
+#===================
+del nums 
+
+#=================
+#  Sumar listas
+#=================
+L1 = [1,2,3]
+L2 = [4,5,6]
+print(L1+L2)
+
+#==================
+#  Llenado a mano
+#==================
+potencial = []
+for i in range(0,10000):
+    potencial.append(float(i))
+    print(potencial[100])
+
+#============================
+#  Genera
 
