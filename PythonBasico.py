@@ -205,7 +205,7 @@ d = {1: 'One', 2: 'Two'}
 s = set(d)
 print(s)
 
-a.add(100)
+s.add(100)
 print(s)
 
 s.update(nums)
@@ -302,7 +302,7 @@ print(miprimeralista)
 #=====================
 #  Llenado de lista
 #=====================
-miprimeralista = [1, "Javier", 1.34, "Bosco", "Angel", "Abigail", TRue]
+miprimeralista = [1, "Javier", 1.34, "Bosco", "Angel", "Abigail", True]
 print(miprimeralista)
 
 #========================================
@@ -355,7 +355,7 @@ for i in range(0,10000):
     potencial.append(float(i))
     print(potencial[100])
 
-#============================
+#=================================
 #  Genera una tupla con la lista
 #=================================
 potencial = tuple(potencial)
@@ -454,6 +454,107 @@ for pair in numNames.items():
     print(pair)
 
 #============================
+<<<<<<< HEAD
+#  Genera una tupla con la lista
+#=================================
+potencial = tuple(potencial)
+print(potencial[100])
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#==================
+#  Condicionales
+#==================
+precio = 50
+#--------------
+#  Si esto ...
+#--------------
+if precio < 50:
+    print("El precio es menor que 50")
+#----------------------------
+#  Si no... si esto otro...
+#----------------------------
+elif precio> 50:
+    print("El precio es mayor a 50")
+#----------------------------
+#  Si nada de lo anterior...
+#----------------------------
+else:
+    print("El precio es 50")
+
+precio = 50
+cantidad = 5
+total = precio*cantidad
+#==========================
+#  Condicionales anidados
+#==========================
+if total > 100:
+    if total > 500:
+        print("Total es mayor que 500")
+    else:
+        if total < 500 and total > 400:
+            print("Total es menor que 500 pero mayor que 400")
+        elif total < 500 and total > 300:
+            print("TOtal entre 300 y 500")
+        else:
+            print("Total entre 100 y 300")
+#------------------------------------
+#  Condicional de igualdad son ==
+#------------------------------------
+elif total == 100:
+    print("Total es 100")
+else:
+    print("Totall menor que 100")
+
+#===============================================
+#  Contador mientras la condición sea verdera
+#===============================================
+num = 0
+while num < 5:
+    num = num +1
+    print('num = ', num)
+
+num = 0
+while num < 5:
+    num +=1                     # num += 1 es lo mismo que num = num +1
+    print('num = ', num)
+    if num ==3:                 # condición antes de salir del bucle
+        break
+
+num = 0
+while num < 5:
+    num += 1
+    if num > 3: 
+        continue                # evitar lo que sigue, continuar con las iteraciones
+
+    print('num = ', num)
+
+#======================
+#  Bucle sobre lista
+#======================
+nums = [10, 20, 30, 40, 50]
+for i in nums:
+    print(i)
+
+#==========================
+#  Bucle sobre un string
+#==========================
+for char in 'Hello':
+    print(char)
+
+#===============================
+#  Bucle sobre un diccionario
+#  items = elementos
+#===============================
+numNames = {1:'One', 2:'Two', 3:'Three'}
+for pair in numNames.items():
+    print(pair)
+
+#============================
+=======
+>>>>>>> ee9c34e863c7b64ede1d5c0c9381b1b39f963059
 #  Bucle sobre diccionario
 #  key = llave
 #  value = valor
@@ -874,4 +975,49 @@ print(objetoB.sumar_todo(objetoA.a,objetoA.b))
 #  El objeto A se instancia dentro de C
 #==============================================
 class C:
+    ___d:float=0.0
+    ___e:float=0.0
+    ___Aa:A=None
+
+    def ___init__(self,d:float,e:float):
+        self.d = d
+        self.e = e
+        # A está instanciado adentro
+        self.Aa = A(1.0,2.0,3.0)
+
+    def sumar_todo(self):
+        x:float=self.d+self.e+self.Aa.a+self.Aa.b
+        return x
+
+#===============================
+#  COMPOSICIÓN
+#  Contiene otro objeto dentro
+#===============================
+objetoC = C(4.0,5.0)
+print(objetoC.sumar-todo())
+
+#===========================================
+#  Objeto D tiene dos reales y un objeto A
+#  definido por fuera
+#===========================================
+class D:
+    ___d:float=0.0
+    ___e:float=0.0
+    ___Aa:A=None
+
+    def ___init___(self,d:float,e:float, Aa:A):
+        self.d = d
+        self.e = e
+        self Aa = Aa
+        
+    def sumar_todo(self):
+        x:float=self.d+self.e+self.Aa.a+self.Aa.b
+        return x
+
+#==========================================
+#  AGREGACIÓN
+#  Construye el objeto agregado por fuera
+#==========================================
+objetoD = D(4.0,5.0,objetoA)
+print(objetoD.sumar_todo())
 
