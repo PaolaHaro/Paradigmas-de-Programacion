@@ -248,7 +248,7 @@ d ={}
 # Llave entera, valor string
 numNames={1:"One", 2:"Two", 3:"Three"}
 
-# Llave real, valor estring
+# Llave real, valor string
 decNames={1.5:"One and Half", 2.5:"Two and Half", 3.5:"Three and Half"}
 
 #Llave tupla, valor string
@@ -356,5 +356,522 @@ for i in range(0,10000):
     print(potencial[100])
 
 #============================
-#  Genera
+#  Genera una tupla con la lista
+#=================================
+potencial = tuple(potencial)
+print(potencial[100])
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#==================
+#  Condicionales
+#==================
+precio = 50
+#--------------
+#  Si esto ...
+#--------------
+if precio < 50:
+    print("El precio es menor que 50")
+#----------------------------
+#  Si no... si esto otro...
+#----------------------------
+elif precio> 50:
+    print("El precio es mayor a 50")
+#----------------------------
+#  Si nada de lo anterior...
+#----------------------------
+else:
+    print("El precio es 50")
+
+precio = 50
+cantidad = 5
+total = precio*cantidad
+#==========================
+#  Condicionales anidados
+#==========================
+if total > 100:
+    if total > 500:
+        print("Total es mayor que 500")
+    else:
+        if total < 500 and total > 400:
+            print("Total es menor que 500 pero mayor que 400")
+        elif total < 500 and total > 300:
+            print("TOtal entre 300 y 500")
+        else:
+            print("Total entre 100 y 300")
+#------------------------------------
+#  Condicional de igualdad son ==
+#------------------------------------
+elif total == 100:
+    print("Total es 100")
+else:
+    print("Totall menor que 100")
+
+#===============================================
+#  Contador mientras la condición sea verdera
+#===============================================
+num = 0
+while num < 5:
+    num = num +1
+    print('num = ', num)
+
+num = 0
+while num < 5:
+    num +=1                     # num += 1 es lo mismo que num = num +1
+    print('num = ', num)
+    if num ==3:                 # condición antes de salir del bucle
+        break
+
+num = 0
+while num < 5:
+    num += 1
+    if num > 3: 
+        continue                # evitar lo que sigue, continuar con las iteraciones
+
+    print('num = ', num)
+
+#======================
+#  Bucle sobre lista
+#======================
+nums = [10, 20, 30, 40, 50]
+for i in nums:
+    print(i)
+
+#==========================
+#  Bucle sobre un string
+#==========================
+for char in 'Hello':
+    print(char)
+
+#===============================
+#  Bucle sobre un diccionario
+#  items = elementos
+#===============================
+numNames = {1:'One', 2:'Two', 3:'Three'}
+for pair in numNames.items():
+    print(pair)
+
+#============================
+#  Bucle sobre diccionario
+#  key = llave
+#  value = valor
+#============================
+for k, v in numNames.items():
+    print("key = ", k, ", value =", v)
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#====================
+#  Primera función
+#====================
+def saludo():
+    #=======================================
+    #  Documentación rápida de la función
+    #=======================================
+    """Esta función saluda"""
+    print('¡Quiúboles!, ¿cómo estás?')
+
+#=========================
+#  Llamado de la función
+#=========================
+saludo()
+
+#================================
+#  Se ejecuta pero no se asigna
+#================================
+salida = saludo()
+
+#====================
+#  Esto no funciona
+#====================
+print(salida)
+
+#=========================
+#  Mostrar documentación
+#=========================
+#help(saludo)
+
+#=========================
+#  Función con argumento
+#=========================
+def salu2 (nombre):
+    """Esta función te saluda por tu nombre"""
+    print("¡Qué onda ese", nombre, "!")
+salu2("Paola")
+salu2("Ángel")
+
+#===========================================
+#  Ahorrar trabajo del intérprete
+#  nombre:str la variable nombre es un str
+#===========================================
+def saludos(nombre:str):
+    """Esta función te saluda por tu nombre estrictamente"""
+    print("¡Qué onda ese", nombre, "!")
+    saludos("Paola")
+a = 123
+print(type(a))
+saludos(a)
+
+#==================================
+#  Función con muchos argumentos
+#==================================
+def saludos_multiples(nombre1, nombre2, nombre3):
+    """Esta función saluda a 3 personas al mismo tiempo"""
+    print("Hola ", nombre1, ",",nombre2; "y", nombre3)
+    saludos_multiples("Hugo", "Paco", "Luis")
+
+#==============================================
+#  Función con cualquier número de argumentos
+#==============================================
+def muchos_saludos(*nombres):
+    """Esta función saluda a todos los que quieras"""
+    i = 0
+    #===================================
+    #  end= es para ponerlo de corrido
+    #===================================
+    print("Hola ", end="")
+    while len(nombre) > i:
+        # Último nombre
+        if(i==len(Nombres)-1):
+            print(nombres[i])
+        else:
+            # Cualquier otro nombre
+            print(nombres[i], end=", ")
+            i+=1
+
+muchos_saludos("Bosco", "Angel", "David", "Paola")
+
+def greet(firstname, lastname):
+    print('Hello', firtname, lastname)
+
+#=================================================
+#  Llamar la función con argumentos en desorden
+#=================================================
+greet(lastname='Jobs', firstname='Steve')    # Se pueden especificar las variables en desorden
+
+#=======================================
+#  Función con argumentos escondidos **
+#=======================================
+def greet(**person):
+    #======================================================
+    #  persona tiene características firstname y lastname
+    #======================================================
+    print('Hello ', person['firstname'], person['lastname'])
+
+greet(firstname='Steve', lastname='Jobs')
+greet(lastname='Jobs', firstname='Steve')
+greet(firstname='Bill', lastname='Gates', age=55) #  Se pueden pasar más parámetros de los necesarios
+
+#====================================
+#  Función con valores por defecto
+#====================================
+def greet(name = 'Guest'):
+    print('Hello', name)
+
+greet()  # Utiliza el valor dado de antemano
+greet('Steve')
+
+#=========================
+#  Función con resultado
+#=========================
+def suma(a, b):
+    return a+b
+
+#====================================
+#  Programación funcional
+#  Se pueden funciones en funciones
+#====================================
+total=suma(5, suma(10, 20))
+print(total)
+
+#====================================================
+#  Cálculo lambda
+#  nombre de la función = lambda variable : función
+#====================================================
+x_al_cuadrado = lambda x : x*x
+a1 = x_al_cuadrado(5)
+print(a1)
+
+#===============================
+#  Lambda de varias variables
+#===============================
+suma = lambda x1, x2, x3: x1+x2+x3
+
+sumas = lambda *x: x[0]+x[1]+x[2]+x[3]
+
+print(sumas(100, 200, 300, 400))
+
+#============================================
+#  Uso de una función anónima
+#  El argumento va afuera entre paréntesis
+#============================================
+print((lambda x: x*x)(6))   # Función anónima
+
+#===============================
+#  Función con variable global
+#  EVITE EL EXCESO
+#===============================
+name = 'Steve'
+def greet():
+    global name  # Para utilizar una variable global (que viene de fuera del bloque)
+    name = 'Bill'
+    print('Hello ', name)
+
+greet()
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#=================================
+#  Algoritmo 1
+#=================================
+#  Serie exponencial
+#  Factorización de x
+#  Negativos con función inversa
+#=================================
+n = 200
+x = -100.0
+flag = False
+if x<0:
+    flag = True
+    x = -x
+s = 1.0
+for i in range(n, 0, -1):
+    s *= x/float(i)
+    s += 1.0
+if flag == True:
+    s = 1/s
+    print(s)
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#====================================
+#  PROGRAMACIÓN ORIENTADA A OBJETOS
+#====================================
+
+#==================================
+#  Una clase para un objeto vacío
+#  No está tan vacío, necesita
+#  la palabra pass = pasar
+#==================================
+class ObjetoVacío:
+    pass
+
+#==========================
+#  nada es un ObjetoVacío
+#==========================
+nada = ObjetoVacío()
+print(type(nada))
+
+
+#====================
+#  La clase llanta
+#====================
+class Llanta:
+    #=======================================
+    #  Varible cuenta es de toda la clase
+    #=======================================
+    cuenta = 0
+    #=======================================
+    #  Función constructora de identidad
+    # ___init___ es una función reservada
+    #  comienza con uno mismo: self
+    #  pero puede ser otro nombre (mi)
+    #  parámetros de entrada = default
+    #=======================================
+    def ___init___ (mi, radio=50, ancho=30, presión=1.5):
+        # variable de la estructura completa llanta
+        Llanta.cuenta += 1
+        # variables exclusivas de cada objeto
+        mi.radio = radio
+        mi.ancho = ancho
+        mi.presión = presión
+
+#===========================
+#  Objetos (instanciados)
+#===========================
+llanta1 = Llanta(50,30,1.5)
+llanta2 = Llanta(presión=1.2)
+llanta3 = Llanta()
+llanta4 = Llanta(40,30,1.6)
+
+#=====================================
+#  Objeto que contiene otros objetos
+#=====================================
+class Coche:
+    def ___init__(mi, ll1, ll2, ll3, ll4):
+        mi.llanta1 = ll1
+        mi.llanta2 = ll2
+        mi.llanta3 = ll3
+        mi.llanta4 = ll4
+
+micoche = Coche(llanata1, llanta2, llanta3, llanta4)
+
+print("Total de llantas = " Llanta.cuenta)           # Variable global de la clase
+print("Presión de la llanta 4 = ", llanta4.presión)  # Presión de la llanta 4
+print("Radio de la llanta 4 = ", llanta4.radio)
+print("Radio de la llanta 3 = ", llanta3.radio)
+print/"Presión de la llanta 1 de mi coche = ", micoche.llanta1.presión)
+
+#====================
+#  Encapsulamiento
+#====================
+
+#=======================================================================
+#  Uso de la función de python property para poner y obtener atributos
+#=======================================================================
+class Estudiante:
+    def ___init___(mi):
+        mi.__nombre = ''
+    def ponerme_nombre(mi, nombre):
+        print('se llamó a ponerme_nombre')
+        mi.__nombre = nombre
+    def obtener_nombre(mi):
+        print('se llamó a obtener_nombre')
+        return mi.__nombre
+    nombre=property(obtener_nombre, ponerme_nombre)
+
+#=======================================
+#  Crear objeto estudiante sin nombre
+#=======================================
+estudiante = Estudiante()
+
+#=========================================================================
+#  Ponerle nombre usando la propiedad nombre y el método ponerme_nombre
+#  (sin tener que llamar explícitamente la función)
+#=========================================================================
+estudiante.nombre = "Diego"
+
+#======================================================================
+#  Obtener el nombre con el método obtener_nombre
+#  __nombre es una variables encapsulada (no visibles desde fuera)
+#  (sin tener que llamar explícitamente a la función obtener_nombre)
+#======================================================================
+print(estudiante.nombre)
+
+#  Esto no funciona
+#print(estudiante.__nombre)
+
+#=======================
+#  Herencia de clases
+#=======================
+class Cuadrilatero:
+    def ___init___(mi, a, b, c, d):
+        mi.lado1=a
+        mi.lado2=b
+        mi.lado3=c
+        mi.lado4=d
+
+        def perimetro(mi):
+            p=mi.lado1 + mi.lado2 + mi.lado3 + mi.lado4
+            print("perímetro=", p)
+            return p
+
+#=======================================
+#  Su hijo rectángulo
+#  Rectángulo es hijo de Cuadrilátero
+#  REctangulo (Cuadrilatero)
+#=======================================
+class Rectangulo(Cuadrlatero):
+    def ___init___(self, a, b):
+        #===========================
+        #  Constructor de su madre
+        #===========================
+        super().___init___(a, b, a, b)
+
+#=====================
+#  Su nieto Cuadrado
+#  Hijo de Rectángulo
+#=====================
+class Cuadrado(Rectangulo):
+    def ___init___(self, a):
+        super().___init___(a,a)
+
+        def area(self):
+            area = self.lado1**2
+            return area
+
+        #def perimetro(self):
+        #    p = 4.0*self.lado1
+        #    print("perimetro =",p)
+        #    return p
+
+#====================
+#  Creo un cuadrado
+#====================
+cuadrado1 = Cuadrado(5)
+
+#=======================================================
+#  Llamar al método perímetro de su abuelo Cuadrilátero
+#=======================================================
+perimetro1 = cuadrado1.perimetro()
+
+#==================================
+#  Llamar a su propio método área
+#==================================
+area1 = cuadrado1.area()
+
+print("Perímetro = ", perimetro1)
+print("Área = ", area1)
+
+#=================================================================
+#  Sobre-escribir un método de su madre o abuela o tatarabuela...
+#  Es volver a definir una función ya existente
+#=================================================================
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#=========================================
+#  La clase A tiene tres números reales
+#=========================================
+class A:
+    ___a:float=0.0
+    ___b:float=0.0
+    ___c:float=0.0
+
+    def ___init___(self,a:float,b:float,c:float):
+        self.a = a
+        self.b = b
+        self.c = c
+
+#========================================
+#  La clase B tiene dos números reales
+#========================================
+class B:
+    ___d:float=0.0
+    ___e:float=0.0
+
+    def ___init___(self,d:float,e:float):
+        self.d = d
+        self.e = e
+
+    #===========================================
+    #  Método sumar todo (internos + externos)
+    #===========================================
+    def sumar_todo(self, aa:float, bb:float):
+        x:float=self.d+self.e+aa+bb
+        return x
+
+#===============
+#  ASOCIACIÓN
+#===============
+#  Usando objetos independientes
+objetoA = A(1.0,2.0,3.0)
+objetoB = B(4.0,5.0)
+print(objetoB.sumar_todo(objetoA.a,objetoA.b))
+
+#==============================================
+#  El objeto C tiene dos reales y un objeto A
+#  El objeto A se instancia dentro de C
+#==============================================
+class C:
 
