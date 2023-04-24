@@ -140,14 +140,14 @@ class Cuadrado(Rectangulo):
     def __init__(self, a):
         super().__init__(a,a)
 
-        def area(self):
+    def area(self):
             area = self.lado1**2
             return area
 
-        #def perimetro(self):
-        #    p = 4.0*self.lado1
-        #    print("perimetro =",p)
-        #    return p
+    def perimetro(self):
+            p = 4.0*self.lado1
+            print("perimetro = ", p)
+            return p
 
 
 #====================
@@ -240,7 +240,7 @@ class C:
 #  Contiene otro objeto dentro
 #===============================
 objetoC = C(4.0,5.0)
-print(objetoC.sumar-todo())
+print(objetoC.sumar_todo())
 
 #===========================================
 #  Objeto D tiene dos reales y un objeto A
