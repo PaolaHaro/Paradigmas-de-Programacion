@@ -1,4 +1,4 @@
-from aplicacion.clientebancario import ClienteBancario
+from aplicacion.banco.clientebancario import ClienteBancario
  
 #==============================================
 #  try :intenta (correr las instrucciones)
