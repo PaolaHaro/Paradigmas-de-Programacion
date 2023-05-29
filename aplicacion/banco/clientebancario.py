@@ -46,7 +46,7 @@ class ClienteBancario:
     def guardarDinero(self, cantidad:float) -> None:
         self.__balanceDeCuenta = self.__balanceDeCuenta + cantidad
         self.__mandarEmail("---- guardando depósito ----", " se recibieron " + str(cantidad))
-        self.enviarBalanceAlBanco(cantidad)
+        self.__enviarBalanceAlBanco(cantidad)
 
     def retirarDinero(self, cantidad:float) -> None:
         cantidadFinal = self.__balanceDeCuenta - cantidad
