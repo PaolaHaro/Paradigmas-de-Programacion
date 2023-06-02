@@ -1,4 +1,4 @@
-from aplication.repositorio.repositoriodeusuario import RepositorioDeUsuarios
+from aplication.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 from aplicacion.modelos.usuario import Usuario
 
 #==================================================
