@@ -9,7 +9,7 @@ class Usuario:
     #================
     #  Constructor
     #================
-    def __init__(mi, nombre: str, apellido: str, edad: init):
+    def __init__(mi, nombre: str, apellido: str, edad: int):
         mi.__nombre = nombre
         mi.__apellido = apellido
         mi.__edad = edad
