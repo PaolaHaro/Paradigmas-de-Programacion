@@ -19,7 +19,7 @@ class S3(RepositorioDeUsuarios):
 
     def guardar(mi, usuario:Usuario) -> None:
         userData = {"nombre": usuario.getNombre(),
-                "apellido"; usuario.getApellido(),
+                "apellido": usuario.getApellido(),
                 "edad": usuario.getEdad()}
         print(f"Guardando usuario de la bandeja:{mi.__bucket}: {userDara}")
 
