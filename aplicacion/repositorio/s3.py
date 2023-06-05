@@ -1,5 +1,5 @@
-from aplication.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
-from aplication.modelos.usuario import Usuario
+from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
+from aplicacion.modelos.usuario import Usuario
 
 #=========================================
 #  S3 es hijo de RepositorioDeUsuarios
