@@ -14,7 +14,7 @@ from aplicacion.repositorio.s3 import S3
 #  Del directorio aplicacion, el subdirectorio repositorio,
 #  el archivo sistemadearchivos.py : trae el objeto SistemaDeArchivos
 #=======================================================================
-from aplicacio.repositorio.sistemadearchivos import SistemaDeArchivos
+from aplicacion.repositorio.sistemadearchivos import SistemaDeArchivos
 
 #=========================================================
 #  Del directorio aplicacion, el subdirectorio modelos,
