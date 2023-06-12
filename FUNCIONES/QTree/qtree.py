@@ -52,7 +52,7 @@ def subdivision_recursiva(nodo:Nodo, k:int):
 
 def cuantas_contiene(x:float, y:float, w:float, h:float, particulas):
     pts = []
-for particula in particulas:
+    for particula in particulas:
         if particula.x >= x and particula.x <= x+w and particula.y >= y and particula.y <= y+h:
             pts.append(particula)
     return pts
