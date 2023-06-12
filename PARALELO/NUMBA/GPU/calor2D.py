@@ -17,7 +17,7 @@ pasos = 100
 
 #  Tamaño de las celdas
 dx = L/n
-udx = 1.0/(dx*dx)
+udx2 = 1.0/(dx*dx)
 #  Paso de tiempo
 dt = 0.25*(min(dx[0], dx[1])**2)/k
 print("dt = ",dt)
