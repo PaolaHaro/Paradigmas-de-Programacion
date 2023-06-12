@@ -42,7 +42,7 @@ def solucion(u,un,udx2,dt,n,k):
             unueva = evolucion(u,n,udx2,dt,i,k)
             if i == int(nt/2)+int(n[0]/2):
                 unueva = 1.0
-            un[i] = nueva
+            un[i] = unueva
 
 start = time.time()
 for t in range(1,pasos+1):
