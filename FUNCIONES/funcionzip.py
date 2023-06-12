@@ -10,7 +10,7 @@ def solo_impar(elemento):
 # Lista de pares de datos de las dos listas
 print(list(zip(mi_lista, tu_lista, su_lista)))
 
-una_listas = ["a","b","c","d","m","n","n"]
+una_lista = ["a","b","c","d","m","n","n"]
 duplicados = set([x for x in una_lista if una_lista.count(x) > 1])
 print(duplicados)
 
@@ -24,7 +24,7 @@ print(next(cuadrados))
 
 # Pasar una función generadora
 import math
-print(sum(x*x for x in range(5))
+print(sum(x*x for x in range(5)))
 
 # Lista de comprehensión pasada como función
 numeros_pares = [x for x in range(21) if x%2 == 0]
