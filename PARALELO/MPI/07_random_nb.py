@@ -15,4 +15,10 @@ if rank == 0:
     dst = 1
     src = 1
 
-rand
+randNum = numpy.random.random_sample(1)
+print("Process", rank, "drew the number", randNum[0])
+comm.Isend(randNum, dest=dst)
+req = comm.Irecv(randNum, source=src)
+req.Wait()
+print("Process", rank, "received the number", randNum[0])
+
