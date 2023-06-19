@@ -11,7 +11,7 @@ threads = []
 cpus = os.cpu_count()
 print("Núcleos en tu CPU: ", cpus)
 for i in range(cpus):
-    print("registrando el hilo %d" %i)
+    print("registrando el hilo %d" % i)
     threads.append(Thread(target=calc))
 
 start = time.time()
