@@ -74,7 +74,7 @@ def interpolacion(s,p:int=0,r:float=0.0) -> list:
     """ r es el parámetro sobre la curva [0,1)
         p es la suavidad de la curva """
 
-    rdx:np.float = 1.0/s.dx
+    rdx:np.float64 = 1.0/s.dx
     xi:float = []
     i:np.int32 = int(r*s.L*rdx)
     a:np.float64 = r*s.L*rdx - float(i)     # Distancia normalizada
