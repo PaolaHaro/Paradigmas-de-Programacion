@@ -26,7 +26,7 @@ if rank == 0:
 #  Gather es rápido para numpy
 #  enviar datos al proceso root
 #=================================
-comm.Gether(sendarray, recvarray, root=0)
+comm.Gather(sendarray, recvarray, root=0)
 
 if rank == 0:
     for i in range(size):
