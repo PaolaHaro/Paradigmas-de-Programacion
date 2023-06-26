@@ -23,4 +23,4 @@ for proceso in procesos:
     proceso.join()
 
 end = time.time()
-print("Se tardó: ", end-start)|
+print("Se tardó: ", end-start)
