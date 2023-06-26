@@ -47,7 +47,7 @@ def solucion(u,un,udx2,dt,n,k):
                 unueva = 1.0
             un[i] = unueva
 
-x, y = np.meshgrid(np.arrange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
+x, y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
 ax = plt.axes(projection='3d')
 start = time.time()
 for t in range(1,pasos+1):
