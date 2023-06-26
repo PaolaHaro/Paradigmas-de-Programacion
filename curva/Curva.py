@@ -21,7 +21,7 @@ class Curva:
     #===============
     #  Constructor
     #===============
-    def __init__(s, x:float=[], dim:init=3):
+    def __init__(s, x:float=[], dim:int=3):
 
         s.x = np.array(x,dtype=np.float64)
         s.dim = dim
