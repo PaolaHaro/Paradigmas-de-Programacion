@@ -9,7 +9,7 @@ class Mensaje:
         #==================================
         #  Arreglo de numpy (optimizado)
         #==================================
-        self.x = np.array([float(x+rank) for x in range(10=)])
+        self.x = np.array([float(x+rank) for x in range(10)])
         self.p = "vengo del proceso "+str(rank)
 
 #=======================
