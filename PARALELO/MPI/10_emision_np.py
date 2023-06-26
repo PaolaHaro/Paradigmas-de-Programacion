@@ -1,7 +1,7 @@
 from mpi4py import MPI
 import numpy
 
-comm = MPI:COMM_WORLD
+comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 #  Tamaño del arreglo
@@ -17,7 +17,7 @@ else:
 #  Broadcast pro que indica el tipo de dato
 #  Optimizado para comunicación rápida
 #=============================================
-comm.Bcast([data, MPI:INT], root=0)
+comm.Bcast([data, MPI.INT], root=0)
 
 #===================================
 #  Asegurarse que todo salió bien
@@ -28,7 +28,7 @@ print(data)
 from mpi4py import MPI
 import numpy
 
-comm = MPI:COMM_WORLD
+comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 #  Tamaño del arreglo
@@ -44,7 +44,7 @@ else:
 #  Broadcast pro que indica el tipo de dato
 #  Optimizado para comunicación rápida
 #=============================================
-comm.Bcast([data, MPI:INT], root=0)
+comm.Bcast([data, MPI.INT], root=0)
 
 #===================================
 #  Asegurarse que todo salió bien
