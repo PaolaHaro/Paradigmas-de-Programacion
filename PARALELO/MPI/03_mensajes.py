@@ -24,7 +24,7 @@ if __name__ == "__main__":
     #=============================================================
     #  Que te mande el anterior y si es cero que sea el último
     #=============================================================
-    fuente = rank-1 if rank!=0 else sixe-1
+    fuente = rank-1 if rank!=0 else size-1
 
     #================================================================
     #  Mándalo al siguiente y si eres el último mándalo al primero
