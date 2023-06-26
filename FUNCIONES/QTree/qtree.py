@@ -10,7 +10,7 @@ class Particula():
 class Nodo():
     def __init__(self, x0:float, y0:float, w:float, h:float, particulas):
         self.x0 = x0
-        self.y0
+        self.y0 = y0
         self.ancho = w
         self.alto = h
         self.particulas = particulas
