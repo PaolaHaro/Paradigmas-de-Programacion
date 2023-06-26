@@ -65,7 +65,7 @@ un = np.zeros(nt,dtype=np.float64)      # arreglo de escritura
 u_d  = cuda.to_device(u)
 un_d = cuda.to_device(un)
 #  Integrar en el tiempo
-for t in range(2,pasos+1):
+for t in range(1,pasos+1):
     solucion_kernel[griddim,blockdim](u_d,un_d,udx2[0],udx2[1],dt,n[0],n[1],kd)
     u_d = cuda.to_device(un_d)
     if t%100==0: print("paso = ",t)
