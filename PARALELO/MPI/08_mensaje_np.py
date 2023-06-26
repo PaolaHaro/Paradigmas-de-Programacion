@@ -42,14 +42,3 @@ elif rank == 1:
     comm.Recv(data, source=0, tag=13)
     print(data)
 
-
-#===============================
-if rank == 0:
-    data = numpy.arange(10, dtype=numpy.float64)
-    comm.Send(data, dest=1, tag=13)
-elif rank == 1:
-    data = numpy.empty(10, dtype=numpy.float64)
-    comm.Recv(data, source=0, tag=13)
-    print(data)
-
-
