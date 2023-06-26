@@ -91,7 +91,7 @@ class QTree():
             areas.add(el.ancho*el.ancho)
         print("Mínima área por segmento: %.3f units" %min(areas))
         for n in c:
-            plt.gcf().gca().add_patch(patches.Rectangle((n.x0, n.y0, n.ancho), n.alto, fill=False))
+            plt.gcf().gca().add_patch(patches.Rectangle((n.x0, n.y0), n.ancho, n.alto, fill=False))
         x = [particula.x for particula in self.particulas]
         y = [particula.y for particula in self.particulas]
         plt.plot(x, y, 'ro')   # muestra las partículas como puntos rojos
