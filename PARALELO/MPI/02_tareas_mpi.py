@@ -6,7 +6,7 @@ from mpi4py import MPI
 #============================
 #  Objeto de comunicadores
 #============================
-comm = MPI:COMM_WORLD
+comm = MPI.COMM_WORLD
 
 #===========================
 #  Cuántos somos en total
