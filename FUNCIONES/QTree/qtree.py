@@ -100,4 +100,4 @@ class QTree():
 
 qtree = QTree(2,200)
 qtree.subdividir()
-qtree.visualizar()
+qtree.visualizacion()
