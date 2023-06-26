@@ -24,7 +24,7 @@ rr = comm.allgather(r_chunk)
 #===================================
 #  Una matriz con todos los datos
 #===================================
-rrr = comm.gather(r_chunk,root=1)
+rrr = comm.gather(r_chunk)
 
 if rank == 0:
     print(r)
