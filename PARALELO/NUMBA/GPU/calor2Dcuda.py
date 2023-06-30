@@ -30,8 +30,8 @@ print("celdas = ",nt)
 
 @jit
 def evolucion(u,n_0,n_1,udx2_0,udx2_1,dt,kd,i):
-    jpl = i + n_0
-    jml = i - n_0
+    jp1 = i + n_0
+    jm1 = i - n_0
     laplaciano = (u[i-1]-2.0*u[i]+u[i+1])*udx2_0 + (u[jm1]-2.0*u[i]+u[jp1])*udx2_1
     unueva = u[i] + dt*kd*laplaciano
     return unueva
