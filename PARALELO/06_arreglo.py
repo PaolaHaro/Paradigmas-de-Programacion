@@ -14,7 +14,7 @@ def sumale100(numeros,candado):
             # desde otro proceso al mismo tiempo
             with candado:
                 # Hacer la operación
-                números[i] += 1
+                numeros[i] += 1
 
 if __name__ == "__main__":
     #====================================================
