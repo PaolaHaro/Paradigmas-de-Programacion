@@ -39,13 +39,13 @@ def evolucion(u,n,udx2,dt,i,k):
 
 @jit(nopython=True)
 def solucion(u,un,udx2,dt,n,k):
-    for jj in range(1,n[1]-1):
-        for ii in range(1,n[0]-1):
-            i = ii + n[0]*jj
-            unueva = evolucion(u,n,udx2,dt,i,k)
-            if i == int(nt/2)+int(n[0]/2):
-                unueva = 1.0
-            un[i] = unueva
+   for jj in range(1,n[1]-1):
+     for ii in range(1,n[0]-1):
+         i = ii + n[0]*jj
+         unueva = evolucion(u,n,udx2,dt,i,k)
+         if i == int(nt/2)+int(n[0]/2):
+             unueva = 1.0
+         un[i] = unueva
 
 x, y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
 ax = plt.axes(projection='3d')
